@@ -54,10 +54,10 @@
             z-index: 0;
         }
 
-        .video-container video, .video-container .video-placeholder {
-            min-width: 100%;
-            min-height: 100%;
-            object-fit: cover;
+        <div class="video-container">
+    <img src="2025-08-23.webp" class="w-full h-full object-cover">
+</div>
+
         }
 
         .image-placeholder {
@@ -244,11 +244,26 @@
 
             <!-- Empty Pans for manual image placement -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div class="image-placeholder aspect-[4/5] rounded-3xl">Project Photo 1</div>
-                <div class="image-placeholder aspect-[4/5] rounded-3xl">Project Photo 2</div>
-                <div class="image-placeholder aspect-[4/5] rounded-3xl">Project Photo 3</div>
-                <div class="image-placeholder aspect-[16/9] lg:col-span-2 rounded-3xl">Wide Project View 4</div>
-                <div class="image-placeholder aspect-[16/9] rounded-3xl">Project Photo 5</div>
+                <div class="aspect-[4/5] rounded-3xl overflow-hidden">
+    <img src="unnamed (1).webp" class="w-full h-full object-cover">
+</div>
+
+                <div class="aspect-[4/5] rounded-3xl overflow-hidden">
+    <img src="unnamed.webp" class="w-full h-full object-cover">
+</div>
+
+                <div class="aspect-[4/5] rounded-3xl overflow-hidden">
+    <img src="unnamed.jpg" class="w-full h-full object-cover">
+</div>
+
+                <div class="aspect-[4/5] rounded-3xl overflow-hidden">
+    <img src="unnamed (2).webp" class="w-full h-full object-cover">
+</div>
+
+                <div class="aspect-[4/5] rounded-3xl overflow-hidden">
+    <img src="your-project-1.jpg" class="w-full h-full object-cover">
+</div>
+
             </div>
         </div>
     </section>
