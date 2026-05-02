@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HB Contracting Projects SA | Premium Construction</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
+                    colors: {
+                        brand: {
+                            blue: '#0056b3',
+                            brown: '#3d2b1f',
+                            dark: '#1a1a1a',
+                            cream: '#fdfbf7'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Smooth transitions */
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .logo-blend { mix-blend-mode: multiply; }
+        
+        /* Video background container */
+        .video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .video-container video, .video-container .video-placeholder {
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+        }
+
+        .image-placeholder {
+            background: #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed #d1d5db;
+            color: #9ca3af;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+<body class="bg-brand-cream text-brand-dark antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-[100] bg-white/90 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Exact Logo Placement -->
+                <div class="flex items-center gap-3 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="h-14 w-14 overflow-hidden rounded bg-white">
+                        <img src="1000066278.png" alt="HB Logo" class="h-full w-full object-contain logo-blend" onerror="this.src='https://placehold.co/100x100?text=HB'">
+                    </div>
+                    <div class="hidden sm:block">
+                        <p class="font-black text-lg leading-none text-brand-brown uppercase tracking-tighter">HB Contracting</p>
+                        <p class="text-[10px] font-bold text-brand-blue tracking-[0.3em] uppercase">Projects SA</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center space-x-10">
+                    <a href="#services" class="text-sm font-bold uppercase tracking-widest text-gray-500 hover:text-brand-blue transition-colors">Services</a>
+                    <a href="#portfolio" class="text-sm font-bold uppercase tracking-widest text-gray-500 hover:text-brand-blue transition-colors">Portfolio</a>
+                    <a href="#schedule" class="text-sm font-bold uppercase tracking-widest text-gray-500 hover:text-brand-blue transition-colors">Hours</a>
+                    <a href="tel:0674888350" class="bg-brand-brown text-white px-6 py-3 rounded-full font-bold text-sm tracking-widest hover:bg-brand-blue transition-all transform hover:scale-105 shadow-lg">
+                        CALL NOW
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Btn -->
+                <button id="menu-btn" class="md:hidden p-2 text-brand-brown">
+                    <i data-lucide="menu" id="menu-icon" class="w-8 h-8"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-white border-b border-gray-100 shadow-2xl p-6">
+            <div class="flex flex-col space-y-4">
+                <a href="#services" class="text-lg font-bold text-brand-brown py-2 border-b border-gray-50">Services</a>
+                <a href="#portfolio" class="text-lg font-bold text-brand-brown py-2 border-b border-gray-50">Portfolio</a>
+                <a href="#schedule" class="text-lg font-bold text-brand-brown py-2 border-b border-gray-50">Business Hours</a>
+                <a href="tel:0674888350" class="flex items-center justify-center gap-2 bg-brand-blue text-white py-4 rounded-xl font-bold uppercase tracking-widest">
+                    <i data-lucide="phone" class="w-5 h-5"></i> Call 067 488 8350
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Video Placeholder & Transparent Banner -->
+    <section class="relative min-h-[95vh] flex items-center justify-center">
+        <!-- Background Layer -->
+        <div class="video-container">
+            <!-- Replace 'video-url.mp4' with your actual video link later -->
+            <!-- <video autoplay muted loop playsinline poster="poster.jpg">
+                <source src="video-url.mp4" type="video/mp4">
+            </video> -->
+            <!-- Placeholder Background -->
+            <div class="video-placeholder w-full h-full bg-brand-dark">
+                <div class="absolute inset-0 bg-gradient-to-br from-brand-brown/80 via-brand-dark/90 to-brand-blue/60"></div>
+                <!-- Dynamic Pattern -->
+                <div class="absolute inset-0 opacity-10" style="background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');"></div>
+            </div>
+        </div>
+
+        <!-- The Transparent Hero Banner -->
+        <div class="relative z-10 w-full max-w-5xl px-6">
+            <div class="glass p-10 md:p-20 rounded-[2.5rem] text-center border-white/10 shadow-2xl overflow-hidden relative">
+                <div class="relative z-10">
+                    <div class="flex items-center justify-center gap-2 mb-8">
+                        <div class="h-px w-8 bg-brand-blue"></div>
+                        <span class="text-brand-blue font-black tracking-[0.4em] text-xs uppercase">Est. Cape Town</span>
+                        <div class="h-px w-8 bg-brand-blue"></div>
+                    </div>
+                    
+                    <h1 class="text-5xl md:text-8xl font-black text-white mb-8 tracking-tighter uppercase leading-[0.9]">
+                        Building <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-blue-400">Excellence</span>
+                    </h1>
+                    
+                    <p class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-medium leading-relaxed">
+                        HB Contracting Projects SA delivers high-performance structural solutions, renovations, and maintenance for elite properties.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-5">
+                        <a href="#services" class="w-full sm:w-auto px-10 py-5 bg-white text-brand-dark font-black rounded-full hover:bg-brand-blue hover:text-white transition-all transform hover:-translate-y-1">
+                            OUR SERVICES
+                        </a>
+                        <a href="tel:0674888350" class="w-full sm:w-auto px-10 py-5 glass text-white font-black rounded-full hover:bg-white/10 transition-all">
+                            GET A QUOTE
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/30 animate-bounce">
+            <i data-lucide="chevron-down" class="w-8 h-8"></i>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                <div class="lg:col-span-5">
+                    <h2 class="text-brand-blue font-black tracking-[0.2em] text-xs uppercase mb-4">What We Do</h2>
+                    <h3 class="text-4xl md:text-6xl font-black text-brand-brown uppercase leading-[0.95] tracking-tighter mb-8">
+                        Turn-Key <br>Contracting <br>Solutions
+                    </h3>
+                    <p class="text-gray-500 text-lg mb-10 leading-relaxed">
+                        We don't just build; we engineer longevity. Every project is handled with precision from the first brick to the final coat of paint.
+                    </p>
+                    <div class="p-8 bg-brand-blue rounded-3xl text-white">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="award" class="w-10 h-10"></i>
+                            <span class="text-2xl font-black italic">5.0 Star Rated</span>
+                        </div>
+                        <p class="font-medium opacity-80">Consistent 5-star delivery based on our last 10 major project reviews in Matroosfontein.</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Service Box 1 -->
+                    <div class="p-10 border border-gray-100 rounded-[2rem] hover:shadow-2xl transition-all group">
+                        <div class="w-14 h-14 bg-brand-brown/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-blue transition-colors">
+                            <i data-lucide="hammer" class="w-7 h-7 text-brand-brown group-hover:text-white"></i>
+                        </div>
+                        <h4 class="text-xl font-black text-brand-brown uppercase mb-4">General Building</h4>
+                        <p class="text-gray-500 text-sm">Structural engineering, home extensions, and new developments.</p>
+                    </div>
+                    <!-- Service Box 2 -->
+                    <div class="p-10 border border-gray-100 rounded-[2rem] hover:shadow-2xl transition-all group">
+                        <div class="w-14 h-14 bg-brand-brown/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-blue transition-colors">
+                            <i data-lucide="pipette" class="w-7 h-7 text-brand-brown group-hover:text-white"></i>
+                        </div>
+                        <h4 class="text-xl font-black text-brand-brown uppercase mb-4">Plumbing</h4>
+                        <p class="text-gray-500 text-sm">Full reticulation, maintenance, and high-pressure geyser installs.</p>
+                    </div>
+                    <!-- Service Box 3 -->
+                    <div class="p-10 border border-gray-100 rounded-[2rem] hover:shadow-2xl transition-all group">
+                        <div class="w-14 h-14 bg-brand-brown/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-blue transition-colors">
+                            <i data-lucide="zap" class="w-7 h-7 text-brand-brown group-hover:text-white"></i>
+                        </div>
+                        <h4 class="text-xl font-black text-brand-brown uppercase mb-4">Electrical</h4>
+                        <p class="text-gray-500 text-sm">Industrial and residential wiring with full compliance certification.</p>
+                    </div>
+                    <!-- Service Box 4 -->
+                    <div class="p-10 border border-gray-100 rounded-[2rem] hover:shadow-2xl transition-all group">
+                        <div class="w-14 h-14 bg-brand-brown/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-blue transition-colors">
+                            <i data-lucide="layout" class="w-7 h-7 text-brand-brown group-hover:text-white"></i>
+                        </div>
+                        <h4 class="text-xl font-black text-brand-brown uppercase mb-4">Renovations</h4>
+                        <p class="text-gray-500 text-sm">Complete interior remodeling, tiling, and high-end finishes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Placeholders -->
+    <section id="portfolio" class="py-24 bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div>
+                    <h2 class="text-brand-blue font-black tracking-[0.2em] text-xs uppercase mb-4">Gallery</h2>
+                    <h3 class="text-4xl font-black text-white uppercase tracking-tighter">Recent Craftsmanship</h3>
+                </div>
+                <div class="text-gray-400 text-sm font-bold uppercase tracking-widest">Selected Works 2024-2025</div>
+            </div>
+
+            <!-- Empty Pans for manual image placement -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="image-placeholder aspect-[4/5] rounded-3xl">Project Photo 1</div>
+                <div class="image-placeholder aspect-[4/5] rounded-3xl">Project Photo 2</div>
+                <div class="image-placeholder aspect-[4/5] rounded-3xl">Project Photo 3</div>
+                <div class="image-placeholder aspect-[16/9] lg:col-span-2 rounded-3xl">Wide Project View 4</div>
+                <div class="image-placeholder aspect-[16/9] rounded-3xl">Project Photo 5</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule & Contact Section -->
+    <section id="schedule" class="py-32 bg-brand-cream overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <!-- Flawless Time Schedule -->
+                <div class="bg-brand-brown p-12 rounded-[3rem] text-white shadow-2xl relative">
+                    <div class="absolute top-0 right-0 p-8 opacity-10">
+                        <i data-lucide="clock" class="w-32 h-32"></i>
+                    </div>
+                    <h3 class="text-3xl font-black uppercase tracking-tighter mb-10">Operations</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-center border-b border-white/10 pb-4">
+                            <span class="font-bold text-gray-400">Monday - Friday</span>
+                            <span class="font-black text-xl text-brand-blue">07:00 – 19:00</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-white/10 pb-4">
+                            <span class="font-bold text-gray-400">Saturday</span>
+                            <span class="font-black text-xl text-brand-blue">07:00 – 19:00</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-4">
+                            <span class="font-bold text-gray-400">Sunday</span>
+                            <span class="font-black text-xl text-red-400">CLOSED</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-12 p-8 bg-white/5 rounded-2xl border border-white/10">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-brand-blue flex items-center justify-center">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">Main Office</p>
+                                <p class="font-bold text-lg">24462 Namuli St, Cape Town</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div>
+                    <h2 class="text-brand-blue font-black tracking-[0.2em] text-xs uppercase mb-4">Connect</h2>
+                    <h3 class="text-5xl font-black text-brand-brown uppercase tracking-tighter leading-none mb-8">
+                        Ready to <br>Commence <br>Construction?
+                    </h3>
+                    <p class="text-gray-500 text-lg mb-12">
+                        Get in touch directly with the site manager for immediate quotes and site inspections across the Western Cape.
+                    </p>
+                    <div class="space-y-4">
+                        <a href="tel:0674888350" class="flex items-center justify-between p-6 bg-white border border-gray-100 rounded-2xl group hover:border-brand-blue transition-all">
+                            <div class="flex items-center gap-4">
+                                <i data-lucide="phone" class="w-6 h-6 text-brand-blue"></i>
+                                <span class="font-black text-xl text-brand-brown">067 488 8350</span>
+                            </div>
+                            <i data-lucide="arrow-right" class="w-6 h-6 text-gray-300 group-hover:text-brand-blue group-hover:translate-x-1 transition-all"></i>
+                        </a>
+                        <a href="sms:0674888350" class="flex items-center justify-between p-6 bg-white border border-gray-100 rounded-2xl group hover:border-brand-blue transition-all">
+                            <div class="flex items-center gap-4">
+                                <i data-lucide="message-square" class="w-6 h-6 text-brand-blue"></i>
+                                <span class="font-black text-xl text-brand-brown">SEND A MESSAGE</span>
+                            </div>
+                            <i data-lucide="arrow-right" class="w-6 h-6 text-gray-300 group-hover:text-brand-blue group-hover:translate-x-1 transition-all"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark py-20 text-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="flex justify-center mb-10">
+                <div class="h-20 w-20 overflow-hidden rounded bg-white p-2">
+                    <img src="1000066278.png" alt="HB Logo" class="h-full w-full object-contain logo-blend" onerror="this.style.display='none'">
+                </div>
+            </div>
+            <p class="font-black text-2xl uppercase tracking-tighter mb-2">HB Contracting Projects SA</p>
+            <p class="text-gray-500 font-bold uppercase tracking-[0.3em] text-[10px] mb-10">Matroosfontein, Cape Town</p>
+            
+            <div class="h-px w-20 bg-brand-blue mx-auto mb-10"></div>
+            
+            <p class="text-gray-600 text-xs font-medium">
+                &copy; <span id="year"></span> HB Contracting Projects. Professional Construction & Maintenance.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Footer Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            if (isOpen) {
+                mobileMenu.classList.add('hidden');
+                menuIcon.setAttribute('data-lucide', 'menu');
+            } else {
+                mobileMenu.classList.remove('hidden');
+                menuIcon.setAttribute('data-lucide', 'x');
+            }
+            lucide.createIcons();
+        });
+
+        // Close menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        });
+
+        // Scroll reveal logic (Simple)
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.remove('py-2');
+                nav.classList.add('py-4');
+            }
+        });
+    </script>
+</body>
+</html>
